@@ -1,0 +1,19 @@
+<span (dblclick)="todoInfo()">
+    <span>{{todo.id}}.</span>
+    <span>{{todo.title}}</span>
+    
+    <div class="to-left">
+        <label class="small">נוצר ע"י</label>
+        <span class="small">{{todo.createdBy}}</span>
+    <button mat-icon-button color="link" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button color="link" aria-label="Example icon button with a heart icon" (click)="deleteTodo()">
+        <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-raised-button (click)="todoInfo()">פרטי משימה</button>
+    <button mat-raised-button (click)="editTodo()">ערוך משימה</button>
+   
+</div>
+</span>
+

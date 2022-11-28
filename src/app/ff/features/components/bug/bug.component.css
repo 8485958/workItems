@@ -1,0 +1,21 @@
+table{
+    direction: rtl;
+    width: 90vw;
+    margin-left: auto;
+    padding: 10px;
+}
+  th.mat-header-cell{
+    text-align: right;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }

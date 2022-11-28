@@ -1,0 +1,34 @@
+
+<div>
+    <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>כותרת המשימה</mat-label>
+        <input matInput type="text" [(ngModel)]="title" (input)="saveChanges()">
+      </mat-form-field>
+    
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>תוכן המשימה</mat-label>
+        <input matInput type="text" [(ngModel)]="body" (input)="saveChanges()">
+      </mat-form-field>
+    
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>סוג המשימה</mat-label>
+        <input matInput type="text" [(ngModel)]="type" (input)="saveChanges()">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>נוצר ע"י</mat-label>
+        <mat-select [(ngModel)]="createdBy" req (ngModelChange)="saveChanges()">
+          <mat-option value="{{option.name}}" *ngFor="let option of users">{{option.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>מופנה בשביל</mat-label>
+        <mat-select [(ngModel)]="assignedTo" (ngModelChange)="saveChanges()">
+          <mat-option value="{{option.name}}" *ngFor="let option of users">{{option.name}}</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+      <button *ngIf="isCreate" mat-button color="primary" (click)="addTodo()">צור משימה</button> 
+      <button *ngIf="!isCreate" mat-button color="primary" (click)="updateTodo()">עדכן משימה</button>
+      <button mat-button routerLink="/bug">חזרה</button>
+    </div>
+    
+    

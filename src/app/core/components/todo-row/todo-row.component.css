@@ -1,0 +1,15 @@
+span{
+    display: flex;
+}
+button{
+    margin-right: 20px;
+}
+.to-left{
+    display: flex;
+    align-items:center ;
+    margin-right: auto;
+}
+.small{
+    font-size: 12px;
+    margin-right: 40px;
+}
